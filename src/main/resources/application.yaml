@@ -1,0 +1,43 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test01
+    username: root
+    password: root
+  redis:
+    password:
+    host: localhost
+    client-type: jedis
+
+mybatis:
+#  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+
+info:
+  appName: boot-admin
+  appVersion: 1.0.0
+  artifactId: @project.artifactId@
+
+
+person:
+  name: 222
+  age: 18
+
+
+
+
+
+
+
+
